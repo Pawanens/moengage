@@ -5,7 +5,17 @@ app.use(express.json());
 
 
 const port = 3000;
-app.post("/data", (req, res)=>{
+app.post("/order", (req, res)=>{
+    // const {Name , Email} =req.body
+    const requestData = req.body;
+    console.log("checkdata" ,requestData)
+    // console.log("Name" , Name)
+    // console.log("Email" , Email)
+    res.send({
+        "requestData":requestData
+    })
+})
+app.post("/checkout_update", (req, res)=>{
     // const {Name , Email} =req.body
     const requestData = req.body;
     console.log("checkdata" ,requestData)
