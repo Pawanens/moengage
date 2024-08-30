@@ -18,7 +18,17 @@ app.post("/order", (req, res)=>{
 app.post("/checkout_update", (req, res)=>{
     // const {Name , Email} =req.body
     const requestData = req.body;
-    console.log("checkdata" ,requestData)
+    console.log("checkout_update" ,requestData)
+    // console.log("Name" , Name)
+    // console.log("Email" , Email)
+    res.send({
+        "requestData":requestData
+    })
+})
+app.post("/checkout_create", (req, res)=>{
+    // const {Name , Email} =req.body
+    const requestData = req.body;
+    console.log("checkout_create" ,requestData)
     // console.log("Name" , Name)
     // console.log("Email" , Email)
     res.send({
